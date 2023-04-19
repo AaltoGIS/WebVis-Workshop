@@ -13,32 +13,32 @@ If you are willing to work locally and practice Web App development it is highly
 
 Then, follow the instructions about how to install your own virtual environment.
 
-1. Open the [requirements.txt](requirements.txt) file in VSCode. Then, click on *Create Environment...*
+1.1 Open the [requirements.txt](requirements.txt) file in VSCode. Then, click on *Create Environment...*
     
     ![img1](png/requirements.png)
 
-2. Then, you have to select the environment type. For files like *requirements.txt* you need to choose **Venv**. 
+1.2 Then, you have to select the environment type. For files like *requirements.txt* you need to choose **Venv**. 
 
     ![img1](png/type.png)
 
-3. Then, you have to select the Python version for your environment providing the folder path of the executable file on your system. In the case you don't have the path already given you can find Python path in the *Start Menu*, then, right click on the icon, *Properties*
+1.3 Then, you have to select the Python version for your environment providing the folder path of the executable file on your system. In the case you don't have the path already given you can find Python path in the *Start Menu*, then, right click on the icon, *Properties*
 
     ![img1](png/python.png)
 
-4. Then, you select the *requirements.txt* file located in the root folder.
+1.4 Then, you select the *requirements.txt* file located in the root folder.
 
     ![img1](png/global.png)
 
-5. Then, the *.venv* is going to be installed in the root folder and you will receive a notification from VSCode. You can click on *Show logs* if you want to read the specifications of the installation.
+1.5 Then, the *.venv* is going to be installed in the root folder and you will receive a notification from VSCode. You can click on *Show logs* if you want to read the specifications of the installation.
 
     ![img1](png/install.png)
 
-6. Then, open the *CDM Terminal*.
+1.6 Then, open the *CDM Terminal*.
     
-7. Finally activate your local environment. Open the file `mywebapp.py` on VSCode, then type `Ctrl + Shift + p` and write *select interpreter* and you will choose your local *venv* environment.
+1.7 Finally activate your local environment. Open the file `mywebapp.py` on VSCode, then type `Ctrl + Shift + p` and write *select interpreter* and you will choose your local *venv* environment.
 
     ![img1](png/interpreter.png)
 
-8. At the end your terminal will look like this with the *venv* active.
+1.8 At the end your terminal will look like this with the *venv* active.
 
     ![img1](png/local.png)
