@@ -24,6 +24,9 @@ import pandas as pd
 
 ## ___________________ SCENE 1 _______________________ 
 
+# title
+st.markdown("#### ***Welcome to my Web app - Geoinformatics Workshop 2023***🧐")
+
 # read data
 bikes = gpd.read_file('data/bike-sharing-system-stations.gpkg')
 
@@ -40,7 +43,6 @@ bikes_df = pd.DataFrame(bikes_df)
 st.map(bikes_df, zoom=10)
 
 st.write(bikes_df)
-# st.map(bikes)
 
 ## ___________________ SCENE 2 _______________________ 
 
