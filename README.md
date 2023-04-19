@@ -1,7 +1,9 @@
-# webvis-workshop
+# Web Visualization Workshop 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AaltoGIS/WebVis-Workshop/master)
+
 This Repo contains a web app developed in Streamlit presented as demo at the "Web Visualization Workshop 2023" at Aalto Geoinformatics Research Lab. Get familiar with the documentation of "Scenarios" to test all capabilities of the web app.
 
-## 1. Install Python local environment (Optional but recommended)
+## 1. Install Python local environment
 
 Start cloning or downloading the repository in your computer and open it with [Visual Studio Code](https://code.visualstudio.com/). The VSCode is a text editor very popular for coding and it can install extensions based on the needs, for example, you can install the Python programming extension that will help you to create this environment easily.
 
@@ -42,3 +44,8 @@ Then, follow the instructions about how to install your own virtual environment.
 8. At the end your terminal will look like this with the *venv* active.
 
     ![img1](png/local.png)
+
+
+## 2. Run locally the Web App "Scenarios" 
+
+
