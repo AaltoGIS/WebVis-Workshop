@@ -1,0 +1,10 @@
+name: appenv
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - geopandas=0.12.2  
+  - pillow=9.4.0
+  - streamlit=1.21.0   
+  - plotly=5.14.1
+  - plotly_express=0.4.1
