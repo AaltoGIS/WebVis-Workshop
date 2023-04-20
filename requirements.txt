@@ -1,6 +1,0 @@
-geopandas==0.12.2  
-pillow==8.0.0
-streamlit==1.21.0   
-plotly==5.14.1 
-plotly_express==0.4.1
-#jupyter-server-proxy==3.2.2
