@@ -35,7 +35,7 @@ Then, follow the instructions about how to install your own virtual environment.
 
     ![img1](png/install.png)
 
-6. Then, open the *CDM Terminal*.
+6. Then, open the *CDM Terminal* in VSCode.
     
 7. Finally activate your local environment. Open the file `mywebapp.py` on VSCode, then type `Ctrl + Shift + p` and write *select interpreter* and you will choose your local *venv* environment.
 
