@@ -2,7 +2,7 @@
 
 This Repo contains web apps developed in Streamlit presented as demo at the "Web Visualization Workshop 2023" at Aalto Geoinformatics Research Lab. 
 
-# 1) Install a Python local environment
+# 1 Install a Python local environment
 
 This Workshop will be guided with VSCode and Micromamba. VSCode is a text editor very popular for coding and it enables the installation of extension that supports coding and give extra functionalities, for example, you can install the Micromamba extension that will help you to create a Conda environment environment easily.
 
@@ -36,7 +36,7 @@ Then, follow the next instructions about how to install your own virtual environ
 
     -> Finally, your terminal will have `(appenv)` at the beginning.
 
-# 2) Run locally the Streamlit Web App
+# 2 Run locally the Streamlit Web App
 
 Once you have installed your local Python environment and it is activate in the *Command Prompt* terminal. Run the the Streamlit Web App so we can start practicing some development in this workshop. 
 
@@ -48,9 +48,10 @@ cd streamlit
 Then, to inititate the Streamlit web app run:
 
 ```
-streamlit run Hello.py
+streamlit run App.py
 ```
 This command will open a Localhost in your browser where you will find information about the *Hello* web app. It might look like:
 
+![app](png/app.png)
 
 
