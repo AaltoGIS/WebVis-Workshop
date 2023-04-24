@@ -8,32 +8,31 @@ Data:
 
 """
 
-import streamlit as st
-import pandas as pd
-
-
 st.markdown("""
             ### ✍️ ***Subset bike-sharing stations with average***
             
             1. Read with *Pandas* the file `bike-sharing-system-exercise-1.csv` from `data` folder.
-            2. Store the average bike capacity using the column `Kapasiteet`
-            3. Add a checkbox button with `st.checkbox()`. Check the [Documentation](https://docs.streamlit.io/library/api-reference/widgets/st.checkbox)
-            4. Every time you check the box it will subset the bikes with values higher than the average.
-            5. Display a communicative message. e.g. Total bike stations.
+            2. Calculate the average bike capacity using the column `Kapasiteet`
+            3. Add a radio button with `st.radio()`. Check the [Documentation](https://docs.streamlit.io/library/api-reference/widgets/st.radio)
+            4. Include two options in radio button: 
+                - First one to subset values higher than average, 
+                - Second one to subset values lower than average
+            5. Display a communicative message every time for subset. e.g. Total bike stations.
             6. Display a map
             
-            Be sure that you app is always displaying a map even before you click on the checkbox. 
-            if you want to make it challenging add two checkboxes, one to subset higher than average 
-            and a second to subset lower than average. 
+            Be sure that you app is always displaying a map even before you click on the radio button. 
+            Also, add a third option that says `None` and it display all data with no subset.
+                        
+            ##### **Here a Clue**
             
-            Add the condition, if two boxes are checked then 
-            it displays a message: *"You can only check one"*
+            First store your radio button function in a variable once you have added the options like:
             
-            **Here a Clue**            
-            The way to make understand your code that a checkbox is checked is by using `if st.checkbox():`. 
+            `my_options = st.radio()`
             
-            If you add more checkboxes better name them then it is easier to do logic operations.
+            Then, the way to make understand your code that a radio button is checked is by using:
             
+            `if my_options=='my_selection':`
+                                 
             ---
             """)
 
@@ -42,7 +41,6 @@ st.markdown("""
 
 import pandas as pd
 import streamlit as st
-
 
 
 #END
