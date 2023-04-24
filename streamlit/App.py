@@ -9,12 +9,10 @@ Data:
     - Bike-sharing system stations [Helsinki] CC-BY from: https://hri.fi/data/en_GB/dataset/hsl-n-kaupunkipyoraasemat
 
 Multiapps connected
-    1) Read data , dataframe, and display on Map
-    2) Read data, add slider for capacity in bike station, and display map
-    3) Create a multipage app
-    4) Read data and display heatmap
-    5) Read data, subset antenna technology, display heatmap
-    6) Add a download button
+    1) Helsinki bike-sharing system
+        - Statistics:       columns, messages, metrics
+        - Visualization:    map layers
+        - Subset:           slider
 '''
 
 import streamlit as st

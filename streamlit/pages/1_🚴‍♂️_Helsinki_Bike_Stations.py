@@ -12,7 +12,7 @@ st.set_page_config(page_title="Bike-sharing system stations Helsinki",
                    initial_sidebar_state="expanded")
 
 ## _________________ TABS ________________
-tab1, tab2 = st.tabs(['Statistics', 'Visualization'])
+tab1, tab2, tab3 = st.tabs(['Statistics', 'Visualization', 'Subset'])
 
 with tab1:
     st.markdown("""
@@ -62,7 +62,26 @@ with tab1:
 
         st.metric('Median Capacity', value=med, delta=f'{diff} diff', delta_color='inverse')
 
+    
+    with st.expander('Functions used', expanded=False):
+        st.code("""
+                    st.markdown()
+                    
+                    ---------------------------------------------------
 
+                    column1, column2 = st.columns(2)
+                    
+                    with column1:
+                        st.info("The minimum bike capacity...")
+                        
+                    with column2:
+                        st.info("The maximum bike capacity...")
+                        
+                    ---------------------------------------------------
+                    
+                    st.metric('Label', value = statistic, delta = rate)
+                """)
+        
 ## -------------------------------------------------------------------------------------------------
 
 with tab2:
@@ -94,7 +113,10 @@ with tab2:
         st.map(bikes_df, zoom=10)
 
         with st.expander('Code:', expanded=False):
-            st.code("st.map(bikes_df, zoom=10)")
+            st.code("""
+                    import streamlit as st
+                    
+                    st.map(bikes_df, zoom=10)""")
             
     if layer_type==layers[1]:
         
@@ -129,6 +151,10 @@ with tab2:
         with st.expander('Code:', expanded=False):
         
             st.code("""
+                    
+                import pydeck as pdk
+                import streamlit as st
+                
                 st.pydeck_chart(pdk.Deck(
                             map_style='mapbox://styles/mapbox/light-v9',
                             tooltip={"text": "{Name}: {Kapasiteet} Bikes"},
@@ -157,6 +183,84 @@ with tab2:
                     ))
                 """)
             
+## -------------------------------------------------------------------------------------------------
 
+with tab3:
+    
+    st.markdown("""
+                ### ***Filtering data with UI***
+                
+                The User Interaction(UI) can be used as a ***input variables*** for creating new subsets of data.
+                The main step is that you define the attributes you want to use for subseting data and add 
+                them as options in the UI. It can be names or values, depends on your need you might find 
+                the right Streamlit function.
+                
+                Let's check some examples with the Bike-sharing data in Helsinki.
+                
 
+                ###### *1) Let's define the limits of the bike capacity in two Float variables*
 
+                ###### *2) Define the Slider with bike capacity*
+                
+                ###### *3) Subset the range*
+                
+                ###### *4) Map the subset*
+                
+                """)
+    
+    with st.expander('Check the code', expanded=False):
+        
+        st.code("""
+                # 1 define range of float variables to subset
+                min_capacity = float(bikes_df.Kapasiteet.min())
+                max_capacity = float(bikes_df.Kapasiteet.max())
+                
+                # 2 define slider
+                range = st.slider('Choose the bike capacity range', 
+                                    min_value=min_capacity, 
+                                    max_value=max_capacity, 
+                                    value=(min_capacity, max_capacity),
+                                    step = 1.0)
+                
+                # 3 subset data
+                min, max = range                
+                subset = bikes_df.loc[(bikes_df.Kapasiteet>=min) & (bikes_df.Kapasiteet<=max)]
+                
+                # 4 map
+                st.map(subset, zoom=10)
+                """)
+        
+    st.markdown("""---""")
+    
+    # define range of variables to subset
+    min_capacity = float(bikes_df.Kapasiteet.min())
+    max_capacity = float(bikes_df.Kapasiteet.max())
+    
+    st.write(f"""
+                The minimum bike capacity is **{min_capacity}** and the maximum is **{max_capacity}**. 
+                Both values are used as limits in the slider.
+                
+                """)
+
+    # define slider
+    range = st.slider('Choose the bike capacity range', 
+                min_value=min_capacity, 
+                max_value=max_capacity, 
+                value=(min_capacity, max_capacity),
+                step = 1.0)
+    
+    st.write('Range selected:', range)
+    
+    # subset data
+    min, max = range
+    
+    subset = bikes_df.loc[(bikes_df.Kapasiteet>=min) & (bikes_df.Kapasiteet<=max)]
+    
+    #map
+    st.map(subset, zoom=10)
+    
+    # table
+    subset = subset.sort_values('Kapasiteet', ascending=False).reset_index(drop=True)
+    
+    st.dataframe(subset)
+        
