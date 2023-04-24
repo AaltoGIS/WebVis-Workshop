@@ -14,9 +14,16 @@ This is a Dash app developed by [ivanlai](https://github.com/ivanlai/apps-UK_hou
 
 ## Getting started
 
-- Install the conda environment with mamba by running the following from terminal (inside the `dash` -directory):
+- Use the VSCode Mambalib Install the conda environment with mamba by running the following from terminal (inside the `dash` -directory):
 
-   ```mamba env create -f environment.yml```
+   - Ubuntu/Mac:
+
+      ```mamba env create -f environment.yml```
+
+   - Windows:
+
+      ```mamba env create -f environment_win.yml```
+
 
 - Activate the environment:
 
