@@ -24,7 +24,7 @@ st.markdown("""
             """)
 
 # read cellular antennas
-antennas = pd.read_csv('data/OpenCell_EC.csv', sep=';')
+antennas = pd.read_csv('streamlit/data/OpenCell_EC.csv', sep=';')
 
 # get datetime from UNIX
 antennas['datetime'] = [datetime.fromtimestamp(value) for value in antennas['created']]

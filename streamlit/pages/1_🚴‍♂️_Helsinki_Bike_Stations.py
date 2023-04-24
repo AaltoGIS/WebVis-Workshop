@@ -29,7 +29,7 @@ with tab1:
     ## _____________ FREQUENCIES AND STATISTICS __________________ 
 
     # read data
-    bikes = gpd.read_file('data/bike-sharing-system-stations.gpkg')
+    bikes = gpd.read_file('streamlit/data/bike-sharing-system-stations.gpkg')
 
     # create DataFrame
     bikes_df = bikes[['Name', 'x', 'y', 'Kapasiteet']].rename(columns={'x': 'longitude', 'y':'latitude'})
