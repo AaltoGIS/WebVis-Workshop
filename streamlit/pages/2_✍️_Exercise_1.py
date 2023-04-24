@@ -7,6 +7,8 @@ Data:
     - Bike-sharing system stations [Helsinki] CC-BY from: https://hri.fi/data/en_GB/dataset/hsl-n-kaupunkipyoraasemat
 
 """
+import pandas as pd
+import streamlit as st
 
 st.markdown("""
             ### ✍️ ***Subset bike-sharing stations with average***
@@ -39,8 +41,6 @@ st.markdown("""
 
 ## _____ SOLUTION _____
 
-import pandas as pd
-import streamlit as st
 
 
 #END
