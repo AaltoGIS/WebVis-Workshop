@@ -59,7 +59,7 @@ st.markdown("""
         
         - [**Satellite Imagery Timelapse in Streamlit**](https://huggingface.co/spaces/giswqs/Streamlit)
         
-        *An interactive web app for creating Landsat/GOES timelapse for any location around the globe. The app was built using streamlit, geemap, and Google Earth Engine. By Q. Wu.
+            *An interactive web app for creating Landsat/GOES timelapse for any location around the globe. The app was built using streamlit, geemap, and Google Earth Engine. By Q. Wu.*
         
             """)
 
