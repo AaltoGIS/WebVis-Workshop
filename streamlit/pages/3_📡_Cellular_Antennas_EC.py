@@ -38,7 +38,7 @@ st.info(f'There in total {len(antennas)} cellular antennas')
 fig = px.histogram(antennas, x='datetime')
 st.plotly_chart(fig, use_container_width=True)
 
-with st.expander('Code', expanded=True):
+with st.expander('Code', expanded=False):
     
     st.code("""
             import plotly.express as px
