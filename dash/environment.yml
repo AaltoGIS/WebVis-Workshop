@@ -1,0 +1,17 @@
+name: dashapp
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.8
+  - dash=1.16.0
+  - pandas=1.1.1
+  - plotly=4.10.0
+  - dash-html-components=1.1.1
+  - numpy=1.19.1
+  - geopandas=0.8.1
+  - dash-core-components=1.12.0
+  - dash-bootstrap-components=0.10.6
+  - gunicorn=20.1.0
+  - flask-caching=1.7.1
